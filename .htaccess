@@ -1,0 +1,90 @@
+RewriteEngine On
+
+
+
+RewriteRule ^song_listen_([0-9]+)_([0-9]+).html listen.php?id=$1&cat=$2
+RewriteRule ^song_listen_([0-9]+).html listen.php?id=$1
+
+RewriteRule ^song_listen_([0-9]+)_([0-9]+) download.php?op=listen&id=$1&cat=$2
+RewriteRule ^song_listen_([0-9]+) download.php?op=listen&id=$1
+
+
+
+RewriteRule ^song_download_([0-9]+)_([0-9]+) download.php?id=$1&cat=$2
+RewriteRule ^song_download_([0-9]+) download.php?id=$1&cat=1
+
+
+#RewriteRule ^video_watch_([0-9]+) download.php?action=video&op=watch&id=$1
+RewriteRule ^video_watch_([0-9]+).html video_watch.php?id=$1
+RewriteRule ^video_download_([0-9]+) download.php?action=video&id=$1
+
+RewriteRule ^album/([0-9]+)-([0-9]+)-(.*).html songs.php?id=$1&album_id=$2
+
+
+RewriteRule ^albums-([0-9]+)-([0-9]+).html albums.php?year=$1&start=$2
+RewriteRule ^albums-([0-9]+).html albums.php?year=$1
+RewriteRule ^albums.html albums.php
+
+
+
+RewriteRule ^singer/([0-9]+)-(.*)-(.*)-(asc|desc)-([0-9]+)-(.*).html songs.php?id=$1&album_id=$2&orderby=$3&sort=$4&start=$5&songs_only=1
+
+RewriteRule ^singer/([0-9]+)-(.*)-photos.html singer_photos.php?cat=$1 [NC]
+RewriteRule ^singer/([0-9]+)-(.*)-photos-([0-9]+).html singer_photos.php?cat=$1&start=$3 [NC]
+
+RewriteRule ^singer/([0-9]+)-(.*)-videos.html singer_videos.php?id=$1 [NC]
+RewriteRule ^singer/([0-9]+)-(.*)-videos-([0-9]+).html singer_videos.php?id=$1&start=$3 [NC]
+
+RewriteRule ^singer/([0-9]+)-(.*)-bio.html singer_bio.php?id=$1 [NC]
+
+
+RewriteRule ^singer/([0-9]+)-(.*)-songs.html songs.php?id=$1&songs_only=1
+
+RewriteRule ^singer/([0-9]+)-(.*)-albums.html songs.php?id=$1&only_albums=1
+
+
+RewriteRule ^singer/([0-9]+)-(.*).html singer_overview.php?id=$1
+
+#RewriteRule ^singer/([0-9]+)-(.*).html songs.php?id=$1&songs_only=0
+
+
+
+
+
+
+RewriteRule ^photo_([0-9]+).html singer_photos.php?id=$1 [NC]
+
+
+RewriteRule ^singer-(.*).html songs.php?id=$1
+
+
+
+RewriteRule ^album-(.*)-(.*).html songs.php?id=$1&album_id=$2
+
+RewriteRule ^lyrics-([0-9]+).html lyrics.php?id=$1
+
+RewriteRule ^cat/([0-9]+)-(.*).html browse.php?id=$1
+
+RewriteRule ^cat-(.*).html browse.php?id=$1
+
+RewriteRule ^videos-([0-9]+)-([0-9]+).html videos.php?cat=$1&start=$2
+RewriteRule ^videos-([0-9]+).html videos.php?cat=$1
+
+RewriteRule ^page_([0-9]+).html index.php?action=pages&id=$1
+
+
+RewriteRule ^profile_(.*).html profile.php?id=$1
+
+RewriteRule ^news_view_([0-9]+).html news.php?id=$1
+RewriteRule ^news_([0-9]+)_([0-9]+).html news.php?cat=$1&start=$2
+RewriteRule ^news_([0-9]+).html news.php?cat=$1
+
+RewriteRule ^news.html news.php
+
+RewriteRule ^singers-letter-(.*).html browse.php?op=letter&letter=$1
+
+RewriteRule ^songs-letter-(.*)-([0-9]+).html songs.php?op=letter&letter=$1&start=$2
+RewriteRule ^songs-letter-(.*).html songs.php?op=letter&letter=$1
+
+
+RewriteRule ^style.css css.php
