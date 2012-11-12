@@ -1,10 +1,10 @@
 <?
 //----------- Database Settings -------------- 
 
-$db_host = "localhost" ;
-$db_name = "songs300" ;
-$db_username = "root" ;
-$db_password = "" ;
+$db_host = "localhost";
+$db_name = "songs300";
+$db_username = "root";
+$db_password = "";
 $db_charset = "utf8"; 
 
 
