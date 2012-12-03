@@ -5,39 +5,48 @@ http://yoursitename/admin/
 -----------------------------------
 
 ------Server Requirements -------
-PHP
+PHP v5.2+
 Mysql v5+
 IonCube v4+
 Gd Library
+cURL
 --------------------------------------
 
 -------- Installation ----------------
 
------------ Arabic --------------
-ÇäÔíÁ ŞÇÚÏÉ ÈíÇäÇÊ ãÚ ãÓÊÎÏã æ ßáãÉ ãÑæÑ
+*** Arabic ****
 
-ãÚ ÇáÊÚÏíá Úáì ãáİ
-config.php
+1. ÇäÔíÁ ŞÇÚÏÉ ÈíÇäÇÊ ãÚ ãÓÊÎÏã æ ßáãÉ ãÑæÑ Úä ØÑíŞ áæÍÉ ÊÍßã ÇÓÊÖÇİÊß
 
-ÇÑİÚ ÇáãáİÇÊ İí Çáãáİ ÇáãÖÛæØ Úáì ãæŞÚß
 
-Şã ÈİÊÍ ÇáÑÇÈØ
+2. ÇÑİÚ ÇáãáİÇÊ İí Çáãáİ ÇáãÖÛæØ Úáì ãæŞÚß
+
+
+3. Şã ÈİÊÍ ÇáÑÇÈØ
 
 /install
 
-æ ÇÊÈÚ ÇáÊÚáíãÇÊ æ ÈÚÏ ÇáÇäÊåÇÁ Şã ÈÍĞİ ÇáãÌáÏ
+Úä ØÑíŞ ãÊÕİÍß æ ÇÊÈÚ ÇáÊÚáíãÇÊ
+
+ãËÇá :  http://yoursite.com/install
+
+ãáÇÍÙÉ : ÇĞÇ æÇÌåÊ ÑÓÇáÉ ÚÏã ÇãßÇäíÉ ÇáßÊÇÈÉ Úáì ãÌáÏ Çæ ãáİ ÎáÇá ÇáÊËÈíÊ , Şã ÈÅÚØÇÆå ÇáÊÑÎíÕ 777 ãä ÎáÇá ÇáÇİ Êí Èí
+
+4. ÈÚÏ ÇáÇäÊåÇÁ Şã ÈÍĞİ ÇáãÌáÏ
 install
 
-æ ÇÚØí ÇáãÌáÏ
-uploads
-æ ÌãíÚ ÇáãÌáÏÇÊ ÏÇÎáå ÇáÊÑÎíÕ 777
-
 ----------- English --------------
-Create a new database and edit config.php with database info and script directory name.
 
-upload files into your website over ftp then open url /install over your browser and follow the steps.
+1. Create a new database with username and password from your hosting panel.
 
-delete install folder and give upload folder and sub directories the permission 777
+2. upload files to your website space 
+
+3. open the url /install over your browser and follow the steps. ex : http://yoursite.com/install
+
+note : if you faced any none writable folder message ,give it the permission 777 from ftp 
+
+4. delete "install" folder 
+
 
 
 --------------------------
