@@ -184,14 +184,28 @@ print "
 <script src='$scripturl/js/StrongPassword.js'></script>";
 editor_html_init();
 
+
+//-------- warnings ----------------
 if(file_exists(CWD . "/install/")){
-print "<div style=\"border:1px solid;color: #D8000C;background-color: #FFBABA;padding:3px;text-align:center;margin:0;\">Installation folder exists at /install , Please delete it</div>";
+print "<div style=\"border:1px solid;color: #D8000C;background-color: #FFBABA;padding:3px;text-align:center;margin:0;\">Installation folder exists at /install , Please delete it.</div>";
 }
-        
+   
+   
+if(!function_exists('curl_init') || !function_exists('curl_exec') || !function_exists('curl_setopt')){
+print "<div style=\"border:1px solid;color: #D8000C;background-color: #FFBABA;padding:3px;text-align:center;margin:0;\">cURL Function is not enabled , please make sure to enable it to avoid license problems.</div>";
+}
+
+if(!is_writable(CWD."/license/")){
+print "<div style=\"border:1px solid;color: #D8000C;background-color: #FFBABA;padding:3px;text-align:center;margin:0;\">License Folder /license is not writable , please make sure to set the correct permissions for it to avoid license problems.</div>";
+}
+     
 if($license_properties['expire']['value'] && $license_properties['expire']['value'] != "0000-00-00"){
     $remaining_days = floor((strtotime($license_properties['expire']['value']) - time()) / (24*60*60));
     print "<div style=\"border:1px solid;color: #9F6000;background-color: #F9F0B5;padding:3px;text-align:center;margin:0;direction:ltr;\">The license will expire on : {$license_properties['expire']['value']} ($remaining_days days)</div>";
 }
+//--------------------------------
+
+
 
 
 //---------- Reffer Check -----------------
