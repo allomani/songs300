@@ -523,7 +523,7 @@ parameters : {action:'get_playlist_player',url: song_url,cur_index: index},
 onSuccess: function(t){  
    
 //if(index == 2){
-jwplayer('player_div').remove();
+//jwplayer('player_div').remove();
 
 $('player_div').innerHTML = t.responseText;
 //t.responseText.evalScripts(); 
