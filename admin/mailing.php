@@ -64,7 +64,7 @@ if($send_to=="all"){
                     if($data['pm_email_notify']){
                       $nmsg_url = "$scripturl/messages.php";
                       $nmsg = get_template("pm_email_notify_msg",array("{name_from}","{url}"),array($from_name,$nmsg_url));
-                      $email_result = send_email($sitname,$mailing_email,$data['email'],"$phrases[pm_email_notify_subject]",$nmsg);
+                      $email_result = send_email($sitename,$mailing_email,$data['email'],"$phrases[pm_email_notify_subject]",$nmsg);
                     }
                     
                       
