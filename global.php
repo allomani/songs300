@@ -214,7 +214,7 @@ $rating_types = array('news','singer_photo','song','singer','album','video');
 
 $sitename = $settings['sitename'] ;
 $section_name = $settings['section_name'] ;
-$siteurl = "http://$_SERVER[HTTP_HOST]" ;
+$siteurl = "//$_SERVER[HTTP_HOST]" ;
 if(!isset($script_path)){
 $script_path = trim(str_replace(rtrim(str_replace('\\', '/',$_SERVER['DOCUMENT_ROOT']),"/"),"",CWD),"/");
 }
