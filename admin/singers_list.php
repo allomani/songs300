@@ -4,7 +4,7 @@ define('CWD', (($getcwd = getcwd()) ? $getcwd : '.'));
 
 require(CWD . "/global.php") ;
 
-if(!check_login_cookies()){die("<center> $phrases[access_denied] </center>");} 
+if(!check_admin_login()){die("<center> $phrases[access_denied] </center>");} 
 
 print "<html dir=rtl>
 <title>$phrases[singers_list]</title>";
