@@ -1,4 +1,16 @@
-<?
+<?php
+/**
+ *  Allomani Audio & Video (Songs) v3.0
+ * 
+ * @package Allomani.Songs
+ * @version 3.0
+ * @copyright (c) 2006-2018 Allomani , All rights reserved.
+ * @author Ali Allomani <info@allomani.com>
+ * @link http://allomani.com
+ * @license GNU General Public License version 3.0 (GPLv3)
+ * 
+ */
+
 
 function init_members_connector(){
  global $member_table_tofind,$member_table_toreplace,$members_connector,$member_fields_tofind,$member_fields_toreplace,$search_fields,$required_database_fields_names,$required_database_fields_types;     
