@@ -390,11 +390,11 @@ $newImport -> import ();
     
     
     function print_step_5(){
-        print "<span class='success'>Installation done successfully.</span>
-        <br><br>
+        print "<span class='success'>Installation done successfully.</span>";
+   /*     <br><br>
        <form action='../license_gen.php' method='post'> 
        <input type='submit' value='Activate your License'>
-       </form>";
+       </form>";*/
         
     }
 
