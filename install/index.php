@@ -8,7 +8,7 @@
     $product_name = "Audio & Video";
     $product_ver = "3.0";
 
-    $files_perms = array("config.php","uploads/","license/");
+    $files_perms = array("config.php","uploads/");
 
     $steps = array(1 => 'Server Requirements' , 2=> 'Configuration' , 3=> 'Database Clean' , 4=> 'Database Installation' , 5=> 'Installation Done');
     $step = (int) $_REQUEST['step'];
@@ -179,20 +179,6 @@
 
 
         print "</tr>";
-
-
-
-        print "<tr><td>ionCube</td>";
-
-        if(extension_loaded('ionCube Loader')){
-            print "<td><font color=green>Available</font></td> " ;
-            print "<td><b>Version :</b> " . ioncube_loader_version()."</td>" ;
-        }else{
-            print "<td><font color=red>Not Available</font></td><td></td>" ;
-        }
-        print "</tr>";
-
-
 
 
         print "<tr><td> Mysql </td>";
