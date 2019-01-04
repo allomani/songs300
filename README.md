@@ -16,7 +16,6 @@ http://yoursitename/admin/
 
 * PHP v5.2+
 * Mysql v5+
-* IonCube v4+
 * Gd Library
 * cURL
 
